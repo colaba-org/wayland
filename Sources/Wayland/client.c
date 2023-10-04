@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <wayland-client.h>
 
-int
-main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     struct wl_display *display = wl_display_connect(NULL);
     if (!display) {
         fprintf(stderr, "Failed to connect to Wayland display.\n");
