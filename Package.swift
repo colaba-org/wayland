@@ -18,10 +18,17 @@ let package = Package(
             name: "MyPoint",
             path: "./Sources/MyPoint"
         ),
+        .systemLibrary(
+            name: "Curl",
+            providers: [
+                .apt(["libcurl4-openssl-dev"]),
+                .brew(["curl"])
+            ]
+        ),
         .target(
             name: "Desktop",
             dependencies: [
-                "MyPoint"
+                "MyPoint", "Curl"
             ],
             path: "./Sources/Desktop"
         ),

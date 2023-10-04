@@ -1,0 +1,7 @@
+
+
+module Curl [system] {
+    header "libcurl.h"
+    link "curl"
+    export *
+}
