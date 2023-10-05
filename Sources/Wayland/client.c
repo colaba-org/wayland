@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <wayland-client.h>
 
+// https://www.youtube.com/watch?v=iIVIu7YRdY0
+
 int main(int argc, char *argv[]) {
     struct wl_display *display = wl_display_connect(NULL);
     if (!display) {
